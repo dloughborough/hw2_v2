@@ -285,4 +285,8 @@ puts "========"
 puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
-# TODO!
+roles = Role.all
+for role in roles
+    person = role.person
+    puts "#{movie.title} #{person.name} #{role.character_name}"
+end
