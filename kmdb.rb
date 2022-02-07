@@ -285,8 +285,27 @@ puts "========"
 puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
-roles = Role.all
-for role in roles
+# roles = Role.all
+# for role in roles
+#     person = role.person
+#     movies = role.movies
+#     puts "#{movie.title} #{person.name} #{role.character_name}"
+# end
+
+batman_begins_cast = Movie.where({title: "Batman Begins"})[0]
+for role in batman_begins_cast.roles
     person = role.person
-    puts "#{movie.title} #{person.name} #{role.character_name}"
+    puts "Batman Begins #{person.name} #{role.character_name}"
+end
+
+dark_knight_cast = Movie.where({title: "The Dark Knight"})[0]
+for role in dark_knight_cast.roles
+    person = role.person
+    puts "The Dark Knight #{person.name} #{role.character_name}"
+end
+
+dark_knight_rises_cast = Movie.where({title: "The Dark Knight Rises"})[0]
+for role in dark_knight_rises_cast.roles
+    person = role.person
+    puts "The Dark Knight Rises #{person.name} #{role.character_name}"
 end
