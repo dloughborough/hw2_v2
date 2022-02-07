@@ -295,17 +295,17 @@ puts ""
 batman_begins_cast = Movie.where({title: "Batman Begins"})[0]
 for role in batman_begins_cast.roles
     person = role.person
-    puts "Batman Begins #{person.name} #{role.character_name}"
+    puts "#{batman_begins_cast.title} #{person.name} #{role.character_name}"
 end
 
 dark_knight_cast = Movie.where({title: "The Dark Knight"})[0]
 for role in dark_knight_cast.roles
     person = role.person
-    puts "The Dark Knight #{person.name} #{role.character_name}"
+    puts "#{dark_knight_cast.title} #{person.name} #{role.character_name}"
 end
 
 dark_knight_rises_cast = Movie.where({title: "The Dark Knight Rises"})[0]
 for role in dark_knight_rises_cast.roles
     person = role.person
-    puts "The Dark Knight Rises #{person.name} #{role.character_name}"
+    puts "#{dark_knight_rises_cast.title} #{person.name} #{role.character_name}"
 end
