@@ -73,7 +73,13 @@ Role.destroy_all
 Person.destroy_all
 
 # Generate models and tables, according to the domain model
+#Done by running the following in the terminal:
+#rails generate model Movie
+#rails generate model Person
+#rails generate model Role
 
+#Then added the columns to the table in the migrate files and executed by entering the following in the terminal:
+#rails db:migrate
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
